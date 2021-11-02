@@ -35,7 +35,7 @@ If you are an experienced React or Vue developers I believed you already faced t
 
 ## DOVM
 
-After we developed Cloudsume we decided to create our own framework due to all of available frameworks solve one problem but introduce another problem. Right now we currently experiment DOVM with our own company website: https://ultima.inc
+After we developed Cloudsumé, we decided to create our own framework due to all of available frameworks solve one problem but introduce another problem. Right now we currently experiment DOVM with our own company website: https://ultima.inc
 
 ### Design goal
 
