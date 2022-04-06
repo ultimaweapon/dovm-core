@@ -42,7 +42,7 @@ After we developed Cloudsumé, we decided to create our own framework due to all
 - No Virtual DOM.
 - Freedom on project structure.
 - Simple and lightweight.
-- HTML template instead of JSX, which is compile down into optimized render function.
+- HTML template instead of JSX, which is compile down into a render function.
 - 100% type safety with TypeScript even in the template.
 - Fully asynchronous everywhere.
 - Direct access on DOM when you need it without any barrier.
@@ -147,3 +147,7 @@ Footer.prototype.render = render;
   </footer>
 </template>
 ```
+
+## License
+
+MIT
