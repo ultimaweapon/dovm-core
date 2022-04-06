@@ -1,0 +1,22 @@
+name: CD
+on:
+  push:
+    tags:
+    - '*'
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v3
+    - name: Configure NPM
+      run: |
+        npm config set @dovm:registry https://registry.npmjs.org/
+        npm config set //registry.npmjs.org/:_authToken '${NPM_TOKEN}'
+    - name: Install dependencies
+      run: npm install
+    - name: Publish
+      run: npm publish --access public
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
