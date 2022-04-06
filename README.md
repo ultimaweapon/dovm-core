@@ -24,7 +24,7 @@ Document Object View Model (DOVM) is a next generation framework for building we
 
 ### Svelte
 
-- TypeScript support in horrible.
+- TypeScript support is horrible.
 - Reactivity rely on compiler.
 
 ### What is the problem with Virtual DOM?
