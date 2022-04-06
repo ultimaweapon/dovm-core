@@ -1,6 +1,7 @@
 # Document Object View Model
+[![npm (scoped)](https://img.shields.io/npm/v/@dovm/core)](https://www.npmjs.com/package/@dovm/core)
 
-Document Object View Model (DOVM) is a next generation framework for building website.
+Document Object View Model (DOVM) is a next generation framework for building a website by utilizing a full power of TypeScript.
 
 ## Problems of current frameworks
 
