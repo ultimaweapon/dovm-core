@@ -13,12 +13,8 @@ export interface Container {
 export interface ComponentParams {
   readonly services: ServiceCollection | (() => ServiceCollection);
   readonly container: Container;
-  readonly attrs: {};
-  readonly slots: {};
-}
-
-export function params(services: ServiceCollection | (() => ServiceCollection), container: Container): ComponentParams {
-  return { services, container, attrs: {}, slots: {} };
+  readonly attrs?: {};
+  readonly slots?: {};
 }
 
 export abstract class Component extends Disposable {
@@ -27,14 +23,13 @@ export abstract class Component extends Disposable {
   protected readonly container: Container;
   protected readonly children: Array<Node | Component>;
 
-  constructor(params: ComponentParams) {
+  constructor(p: ComponentParams) {
     super();
-
     this.dependencies = []; // we need to init this before calling params.services due to it is going to call addDependencies
     this.watches = [];
-    this.services = typeof params.services === 'function' ? params.services() : params.services;
+    this.services = typeof p.services === 'function' ? p.services() : p.services;
     this.activator = this.services.resolve(ComponentActivator);
-    this.container = params.container;
+    this.container = p.container;
     this.children = [];
   }
 
