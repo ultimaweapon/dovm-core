@@ -105,7 +105,7 @@ async function bootstrap() {
 
   services.add(ComponentActivator, () => new ComponentActivator());
 
-  const app = new App({ services, container: new AppContainer(), attrs: {}, slots: {} });
+  const app = new App({ services, container: new AppContainer() });
   await app.render();
 }
 ```
