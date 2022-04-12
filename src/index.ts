@@ -5,3 +5,4 @@ export { Comparer, Observable, Observer, ReactiveData, Unobserve } from './obser
 export { Placeholder } from './placeholder';
 export { RenderBuffer } from './render-buffer';
 export { Slot, SlotContext } from './slot';
+export { Toggleable } from './toggleable';
